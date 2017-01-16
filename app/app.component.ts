@@ -8,7 +8,9 @@ import { ContentComponent }   from './content.component';
     template: `
       <top-panel></top-panel>
       <div class='divider'></div>
-      <content></content>
+      <content>
+        <router-outlet></router-outlet>
+      </content>
       `,
     styles: [
       `

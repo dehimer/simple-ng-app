@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'content',
-    template: ``,
+    template: `<ng-content></ng-content>`,
     styles: [
       `
       :host {
