@@ -15,6 +15,7 @@ SIMPLE NG APP FOR TEST PURPOSES
 			.	asking for list of books from server
 			.	scrolling for sides
 		.	content for right side
+		.	do grid for books
 *	.	color of active link
 
 .	TO BUY ENERGY DRINK!

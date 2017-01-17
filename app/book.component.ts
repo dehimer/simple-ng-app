@@ -22,12 +22,11 @@ import { Book } from './book';
       }
 
       .book {
-        flex-basis: 20px;
-        content-align: center;
-        padding: 10px;
+        flex: auto;
         background-color: #ccc;
-        margin: 5px;
         border-radius: 5px;
+        padding: 10px;
+        margin: 5px;
       }
 
     `
@@ -39,7 +38,10 @@ export class BookComponent {
   private authorid: number;
   private subscription: Subscription;
   constructor(private httpService: HttpService, private activateRoute: ActivatedRoute){
-      this.subscription = activateRoute.params.subscribe(params=>this.authorid=params['authorid']);
+      this.subscription = activateRoute.params.subscribe(params=>{
+        this.authorid=params['authorid'];
+        this.updateList();
+      });
   }
   ngOnDestroy(){
       this.subscription.unsubscribe();
@@ -48,17 +50,9 @@ export class BookComponent {
     this.httpService.getData()
       .subscribe((resp: Response) => {
           let data = resp.json();
-          console.log(data)
           this.books = data.books.filter(book => {
-            console.log(book.authorid+':'+this.authorid);
             return +book.author === +this.authorid;
           });
       });
-  }
-  ngOnInit(){
-    this.updateList();
-  }
-  ngDoCheck(){
-    this.updateList();
   }
 }

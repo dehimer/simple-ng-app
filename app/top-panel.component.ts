@@ -6,17 +6,17 @@ import { ButtonComponent }   from './button.component';
     selector: 'top-panel',
     template: `
       <button>
-        <a routerLink="">
+        <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
           Главная
         </a>
       </button>
       <button>
-        <a routerLink="/library">
+        <a routerLink="/library" routerLinkActive="active">
           Библиотека
         </a>
       </button>
       <button>
-        <a routerLink="/about">
+        <a routerLink="/about" routerLinkActive="active">
           О сайте
         </a>
       </button>
@@ -30,6 +30,15 @@ import { ButtonComponent }   from './button.component';
         height: 40px;
         width: 100vw;
         background-color: #555;
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+
+      a.active {
+        color: red;
       }
       `
     ]

@@ -8,7 +8,9 @@ import { Author } from './author';
   template: `
     <div class='leftbar'>
       <div *ngFor="let author of authors" class='author'>
-        <a [routerLink]="[author?.id]">{{author?.name}}</a>
+        <a [routerLink]="[author?.id]" routerLinkActive="active">
+          {{author?.name}}
+        </a>
       </div>
     </div>
     <div class='rightbar'>
@@ -44,6 +46,15 @@ import { Author } from './author';
         background-color: #ccc;
         margin: 5px;
         border-radius: 5px;
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+
+      a.active {
+        color: red;
       }
     `
   ],

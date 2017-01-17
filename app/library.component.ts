@@ -6,12 +6,12 @@ import { ButtonComponent }   from './button.component';
     template: `
     	<div class='panel'>
 	    	<button>
-	        <a routerLink="rooms">
+	        <a routerLink="rooms" routerLinkActive="active">
 	          Комнаты
 	        </a>
 	      </button>
 	      <button>
-	        <a routerLink="books">
+	        <a routerLink="books" routerLinkActive="active">
 	          Книги
 	        </a>
 	      </button>
@@ -41,6 +41,15 @@ import { ButtonComponent }   from './button.component';
       	flex: auto;
       	display: flex;
       	width: 100vw;
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+
+      a.active {
+        color: red;
       }
       `
     ]
