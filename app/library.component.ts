@@ -34,12 +34,13 @@ import { ButtonComponent }   from './button.component';
         align-items: stretch;
         height: 40px;
         width: 100vw;
-        background-color: #555;
+        background-color: #aaa;
       }
 
       .content {
       	flex: auto;
-      	background-color: red;
+      	display: flex;
+      	width: 100vw;
       }
       `
     ]
