@@ -1,0 +1,98 @@
+{
+	"authors": [
+		{
+			"id": "1",
+			"name": "Author One"
+		},
+		{
+			"id": "2",
+			"name": "Author Two"
+		},
+		{
+			"id": "3",
+			"name": "Author Three"
+		},
+		{
+			"id": "4",
+			"name": "Author Four"
+		},
+		{
+			"id": "5",
+			"name": "Author Five"
+		},
+		{
+			"id": "6",
+			"name": "Author Six"
+		}
+	],
+	"books": [
+		{
+			"name": "Book One",
+			"author": "1"
+		},
+		{
+			"name": "Book Two",
+			"author": "1"
+		},
+		{
+			"name": "Book Three",
+			"author": "1"
+		},
+		{
+			"name": "Book Four",
+			"author": "1"
+		},
+		{
+			"name": "Book Five",
+			"author": "1"
+		},
+		{
+			"name": "Book Six",
+			"author": "2"
+		},
+		{
+			"name": "Book Seven",
+			"author": "2"
+		},
+		{
+			"name": "Book Eight",
+			"author": "3"
+		},
+		{
+			"name": "Book Nine",
+			"author": "3"
+		},
+		{
+			"name": "Book Ten",
+			"author": "3"
+		},
+		{
+			"name": "Book Eleven",
+			"author": "3"
+		},
+		{
+			"name": "Book Twelve",
+			"author": "4"
+		},
+		{
+			"name": "Book Thriteen",
+			"author": "5"
+		},
+		{
+			"name": "Book Fourteen",
+			"author": "5"
+		},
+		{
+			"name": "Book Fiveteen",
+			"author": "6"
+		},
+		{
+			"name": "Book Sixteen",
+			"author": "6"
+		},
+		{
+			"name": "Book Seventeen",
+			"author": "6"
+		}
+	]
+}

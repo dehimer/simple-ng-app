@@ -1,5 +1,7 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule }   from '@angular/http';
+
 import { AppComponent }   from './app.component';
 import { TopPanelComponent }   from './top-panel.component';
 import { ContentComponent }   from './content.component';
@@ -16,8 +18,14 @@ import { NotFoundComponent }   from './not-found.component';
 import { BooksComponent }   from './books.component';
 import { RoomsComponent }   from './rooms.component';
 
+import { BookComponent }   from './book.component';
+
+const bookRoutes: Routes =[
+	{ path: ':authorid', component: BookComponent}
+];
+
 const libraryRoutes: Routes =[
-  { path: 'books', component: BooksComponent},
+	{ path: 'books', component: BooksComponent, children: bookRoutes},
   { path: 'rooms', component: RoomsComponent}
 ];
 
@@ -29,8 +37,8 @@ const appRoutes: Routes =[
 ];
 
 @NgModule({
-    imports:      [ BrowserModule, RouterModule.forRoot(appRoutes) ],
-    declarations: [ AppComponent, HomeComponent, LibraryComponent, AboutComponent, NotFoundComponent, TopPanelComponent, ContentComponent, ButtonComponent, BooksComponent, RoomsComponent ],
+    imports:      [ BrowserModule, RouterModule.forRoot(appRoutes), HttpModule ],
+    declarations: [ AppComponent, HomeComponent, LibraryComponent, AboutComponent, NotFoundComponent, TopPanelComponent, ContentComponent, ButtonComponent, BooksComponent, RoomsComponent, BookComponent ],
     bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
