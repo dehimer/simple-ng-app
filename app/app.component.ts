@@ -28,6 +28,8 @@ import { ContentComponent }   from './content.component';
 
       content {
         flex: auto;
+        display: flex;
+        align-items: stretch;
       }
 
       .divider {

@@ -7,9 +7,10 @@ SIMPLE NG APP FOR TEST PURPOSES
 		.	simple buttons in top panel with routes
 	4. 	router and content for every route
 		.	switch between pages
-*		.	switcher on library page
+		.	switcher on library page
 		. 	router for library page
-		.	leftside switcher that will work with params
+*		.	leftside switcher that will work with params
+		.	content for right side
 
 .	TO BUY ENERGY DRINK!
 
