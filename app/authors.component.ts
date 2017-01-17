@@ -4,7 +4,7 @@ import { HttpService} from './http.service';
 import { Author } from './author';
 
 @Component({
-  selector: 'books',
+  selector: 'authors',
   template: `
     <div class='leftbar'>
       <div *ngFor="let author of authors" class='author'>
@@ -60,7 +60,7 @@ import { Author } from './author';
   ],
   providers: [HttpService]
 })
-export class BooksComponent {
+export class AuthorsComponent {
   authors: Author[] = [];
   constructor(private httpService: HttpService){}
   ngOnInit(){

@@ -15,7 +15,7 @@ import { LibraryComponent }   from './library.component';
 import { AboutComponent }   from './about.component';
 import { NotFoundComponent }   from './not-found.component';
 
-import { BooksComponent }   from './books.component';
+import { AuthorsComponent }   from './authors.component';
 import { RoomsComponent }   from './rooms.component';
 
 import { BookComponent }   from './book.component';
@@ -25,7 +25,7 @@ const bookRoutes: Routes =[
 ];
 
 const libraryRoutes: Routes =[
-	{ path: 'books', component: BooksComponent, children: bookRoutes},
+	{ path: 'books', component: AuthorsComponent, children: bookRoutes},
   { path: 'rooms', component: RoomsComponent}
 ];
 
@@ -38,7 +38,7 @@ const appRoutes: Routes =[
 
 @NgModule({
     imports:      [ BrowserModule, RouterModule.forRoot(appRoutes), HttpModule ],
-    declarations: [ AppComponent, HomeComponent, LibraryComponent, AboutComponent, NotFoundComponent, TopPanelComponent, ContentComponent, ButtonComponent, BooksComponent, RoomsComponent, BookComponent ],
+    declarations: [ AppComponent, HomeComponent, LibraryComponent, AboutComponent, NotFoundComponent, TopPanelComponent, ContentComponent, ButtonComponent, AuthorsComponent, RoomsComponent, BookComponent ],
     bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
