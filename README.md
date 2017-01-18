@@ -25,10 +25,8 @@ ToDo List
 	5	color of active link
 	6.	loopback
 *	.	group files by types
-
 	.	branch with material ui for elements
-
-
+	.	add more authors and books
 	.	webpack
 	.	postcss+autoprefixier
 </pre>

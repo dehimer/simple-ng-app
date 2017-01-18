@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-import { TopPanelComponent }   from './top-panel.component';
-import { ContentComponent }   from './content.component';
+import { TopPanelComponent }   from '../top-panel/top-panel.component';
+import { ContentComponent }   from '../content/content.component';
 
 @Component({
     selector: 'simple-app',

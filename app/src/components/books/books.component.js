@@ -10,9 +10,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
-var index_1 = require('./shared/sdk/services/index');
-var BookComponent = (function () {
-    function BookComponent(bookApi, activateRoute) {
+var index_1 = require('../../shared/sdk/services/index');
+var BooksComponent = (function () {
+    function BooksComponent(bookApi, activateRoute) {
         var _this = this;
         this.bookApi = bookApi;
         this.activateRoute = activateRoute;
@@ -22,27 +22,27 @@ var BookComponent = (function () {
             _this.updateList();
         });
     }
-    BookComponent.prototype.ngOnDestroy = function () {
+    BooksComponent.prototype.ngOnDestroy = function () {
         this.subscription.unsubscribe();
     };
-    BookComponent.prototype.updateList = function () {
+    BooksComponent.prototype.updateList = function () {
         var _this = this;
         this.bookApi.find()
             .subscribe(function (books) {
             _this.books = books;
         });
     };
-    BookComponent = __decorate([
+    BooksComponent = __decorate([
         core_1.Component({
-            selector: 'book',
+            selector: 'books',
             template: "\n    <div *ngFor=\"let book of books\" class='book'>\n      {{book?.name}}\n    </div>\n  ",
             styles: [
                 "\n      :host {\n        display: flex;\n        flex-direction: column;\n        align-items: stretch;\n        overflow-y: auto;\n      }\n\n      .book {\n        flex: auto;\n        background-color: #ccc;\n        border-radius: 5px;\n        padding: 10px;\n        margin: 5px;\n      }\n\n    "
             ]
         }), 
         __metadata('design:paramtypes', [index_1.BookApi, router_1.ActivatedRoute])
-    ], BookComponent);
-    return BookComponent;
+    ], BooksComponent);
+    return BooksComponent;
 }());
-exports.BookComponent = BookComponent;
-//# sourceMappingURL=book.component.js.map
+exports.BooksComponent = BooksComponent;
+//# sourceMappingURL=books.component.js.map

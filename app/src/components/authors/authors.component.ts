@@ -1,6 +1,6 @@
 import { Component} from '@angular/core';
-import { Author } from './shared/sdk/models';
-import { AuthorApi } from './shared/sdk/services/index';
+import { Author } from '../../shared/sdk/models';
+import { AuthorApi } from '../../shared/sdk/services/index';
 
 @Component({
   selector: 'authors',

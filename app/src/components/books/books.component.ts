@@ -1,11 +1,11 @@
 import { Component, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
-import { Book } from './shared/sdk/models';
-import { BookApi } from './shared/sdk/services/index';
+import { Book } from '../../shared/sdk/models';
+import { BookApi } from '../../shared/sdk/services/index';
 
 @Component({
-  selector: 'book',
+  selector: 'books',
   template: `
     <div *ngFor="let book of books" class='book'>
       {{book?.name}}
@@ -31,7 +31,7 @@ import { BookApi } from './shared/sdk/services/index';
     `
   ]
 })
-export class BookComponent {
+export class BooksComponent {
   books: Book[] = [];
   private authorid: number;
   private subscription: Subscription;
