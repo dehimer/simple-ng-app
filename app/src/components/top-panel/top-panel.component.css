@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+  height: 40px;
+  width: 100vw;
+  background-color: #555;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a.active {
+  color: red;
+}

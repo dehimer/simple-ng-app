@@ -1,0 +1,29 @@
+:host {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.panel {
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+  height: 40px;
+  width: 100vw;
+  background-color: #aaa;
+}
+
+.content {
+  flex: auto;
+  display: flex;
+  width: 100vw;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a.active {
+  color: red;
+}

@@ -14,11 +14,10 @@ var AppComponent = (function () {
     }
     AppComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: 'simple-app',
-            template: "\n      <top-panel></top-panel>\n      <div class='divider'></div>\n      <content>\n        <router-outlet></router-outlet>\n      </content>\n      ",
-            styles: [
-                "\n      :host {\n        display: flex;\n        flex-direction: column; \n        align-items: stretch;\n        height: 100vh;\n        width: 100vw;\n      }\n\n      top-panel {\n        height: 50px;\n      }\n\n      content {\n        flex: auto;\n        display: flex;\n        align-items: stretch;\n      }\n\n      .divider {\n        height: 2px;\n        width: 100wv;\n        background-color: #333;\n      }\n      "
-            ]
+            styleUrls: ['./app.component.css'],
+            templateUrl: './app.component.html'
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

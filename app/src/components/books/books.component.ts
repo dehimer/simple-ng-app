@@ -5,31 +5,10 @@ import { Book } from '../../shared/sdk/models';
 import { BookApi } from '../../shared/sdk/services/index';
 
 @Component({
+  moduleId: module.id,
   selector: 'books',
-  template: `
-    <div *ngFor="let book of books" class='book'>
-      {{book?.name}}
-    </div>
-  `,
-  styles: [
-    `
-      :host {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        overflow-y: auto;
-      }
-
-      .book {
-        flex: auto;
-        background-color: #ccc;
-        border-radius: 5px;
-        padding: 10px;
-        margin: 5px;
-      }
-
-    `
-  ]
+  styleUrls: [ './books.component.css' ],
+  templateUrl: './books.component.html'
 })
 export class BooksComponent {
   books: Book[] = [];

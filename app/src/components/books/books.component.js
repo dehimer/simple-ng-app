@@ -34,11 +34,10 @@ var BooksComponent = (function () {
     };
     BooksComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: 'books',
-            template: "\n    <div *ngFor=\"let book of books\" class='book'>\n      {{book?.name}}\n    </div>\n  ",
-            styles: [
-                "\n      :host {\n        display: flex;\n        flex-direction: column;\n        align-items: stretch;\n        overflow-y: auto;\n      }\n\n      .book {\n        flex: auto;\n        background-color: #ccc;\n        border-radius: 5px;\n        padding: 10px;\n        margin: 5px;\n      }\n\n    "
-            ]
+            styleUrls: ['./books.component.css'],
+            templateUrl: './books.component.html'
         }), 
         __metadata('design:paramtypes', [index_1.BookApi, router_1.ActivatedRoute])
     ], BooksComponent);

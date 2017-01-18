@@ -24,11 +24,10 @@ var AuthorsComponent = (function () {
     };
     AuthorsComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: 'authors',
-            template: "\n    <div class='leftbar'>\n      <div *ngFor=\"let author of authors\" class='author'>\n        <a [routerLink]=\"[author?.id]\" routerLinkActive=\"active\">\n          {{author?.name}}\n        </a>\n      </div>\n    </div>\n    <div class='rightbar'>\n      <router-outlet></router-outlet>\n    </div>  \n  ",
-            styles: [
-                "\n      :host {\n        display: flex;\n        align-items: stretch;\n        width: 100vw;\n      }\n\n      .leftbar {\n        flex: auto;\n        display: flex;\n        flex-direction: column;\n        overflow-y: auto;\n      }\n\n      .rightbar {\n        flex: 3;\n        display: flex;\n        flex-direction: column;\n        overflow-y: auto;\n      }\n\n      .author {\n        flex-basis: 20px;\n        content-align: center;\n        padding: 10px;\n        background-color: #ccc;\n        margin: 5px;\n        border-radius: 5px;\n      }\n\n      a {\n        color: white;\n        text-decoration: none;\n      }\n\n      a.active {\n        color: red;\n      }\n    "
-            ]
+            styleUrls: ['./authors.component.css'],
+            templateUrl: './authors.component.html'
         }), 
         __metadata('design:paramtypes', [index_1.AuthorApi])
     ], AuthorsComponent);
