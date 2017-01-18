@@ -16,7 +16,6 @@ var app_component_1 = require('./app/app.component');
 var top_panel_component_1 = require('./top-panel/top-panel.component');
 var content_component_1 = require('./content/content.component');
 var router_1 = require('@angular/router');
-var button_component_1 = require('./button/button.component');
 var home_component_1 = require('./home/home.component');
 var library_component_1 = require('./library/library.component');
 var about_component_1 = require('./about/about.component');
@@ -24,6 +23,7 @@ var not_found_component_1 = require('./not-found/not-found.component');
 var authors_component_1 = require('./authors/authors.component');
 var rooms_component_1 = require('./rooms/rooms.component');
 var books_component_1 = require('./books/books.component');
+var ng2_bootstrap_1 = require('ng2-bootstrap/ng2-bootstrap');
 var booksRoutes = [
     { path: ':authorid', component: books_component_1.BooksComponent }
 ];
@@ -42,8 +42,8 @@ var AppModule = (function () {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, router_1.RouterModule.forRoot(appRoutes), http_1.HttpModule, index_1.SDKBrowserModule.forRoot()],
-            declarations: [app_component_1.AppComponent, home_component_1.HomeComponent, library_component_1.LibraryComponent, about_component_1.AboutComponent, not_found_component_1.NotFoundComponent, top_panel_component_1.TopPanelComponent, content_component_1.ContentComponent, button_component_1.ButtonComponent, authors_component_1.AuthorsComponent, rooms_component_1.RoomsComponent, books_component_1.BooksComponent],
+            imports: [platform_browser_1.BrowserModule, router_1.RouterModule.forRoot(appRoutes), http_1.HttpModule, index_1.SDKBrowserModule.forRoot(), ng2_bootstrap_1.ButtonsModule.forRoot()],
+            declarations: [app_component_1.AppComponent, home_component_1.HomeComponent, library_component_1.LibraryComponent, about_component_1.AboutComponent, not_found_component_1.NotFoundComponent, top_panel_component_1.TopPanelComponent, content_component_1.ContentComponent, authors_component_1.AuthorsComponent, rooms_component_1.RoomsComponent, books_component_1.BooksComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

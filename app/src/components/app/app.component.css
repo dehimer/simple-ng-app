@@ -6,10 +6,6 @@
 	width: 100vw;
 }
 
-top-panel {
-	height: 50px;
-}
-
 content {
 	flex: auto;
 	display: flex;
@@ -17,7 +13,7 @@ content {
 }
 
 .divider {
-	height: 2px;
-	width: 100wv;
-	background-color: #333;
+	height: 5px;
+	width: 100vw;
+	background-color: #6d042f;
 }

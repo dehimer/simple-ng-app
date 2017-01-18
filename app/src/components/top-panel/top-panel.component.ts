@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 
-import { ButtonComponent }   from '../button/button.component';
-
 @Component({
   moduleId: module.id,
   selector: 'top-panel',

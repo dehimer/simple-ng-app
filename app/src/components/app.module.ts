@@ -10,8 +10,6 @@ import { ContentComponent }   from './content/content.component';
 
 import { Routes, RouterModule } from '@angular/router';
 
-import { ButtonComponent }   from './button/button.component';
-
 import { HomeComponent }   from './home/home.component';
 import { LibraryComponent }   from './library/library.component';
 import { AboutComponent }   from './about/about.component';
@@ -21,6 +19,8 @@ import { AuthorsComponent }   from './authors/authors.component';
 import { RoomsComponent }   from './rooms/rooms.component';
 
 import { BooksComponent }   from './books/books.component';
+
+import { ButtonsModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 const booksRoutes: Routes =[
 	{ path: ':authorid', component: BooksComponent}
@@ -39,8 +39,8 @@ const appRoutes: Routes =[
 ];
 
 @NgModule({
-    imports:      [ BrowserModule, RouterModule.forRoot(appRoutes), HttpModule, SDKBrowserModule.forRoot() ],
-    declarations: [ AppComponent, HomeComponent, LibraryComponent, AboutComponent, NotFoundComponent, TopPanelComponent, ContentComponent, ButtonComponent, AuthorsComponent, RoomsComponent, BooksComponent ],
+    imports:      [ BrowserModule, RouterModule.forRoot(appRoutes), HttpModule, SDKBrowserModule.forRoot(), ButtonsModule.forRoot() ],
+    declarations: [ AppComponent, HomeComponent, LibraryComponent, AboutComponent, NotFoundComponent, TopPanelComponent, ContentComponent, AuthorsComponent, RoomsComponent, BooksComponent ],
     bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

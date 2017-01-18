@@ -2,16 +2,29 @@
   display: flex;
   justify-content: flex-end;
   align-items: stretch;
-  height: 40px;
   width: 100vw;
-  background-color: #555;
+  background-color: #2b2b4a;
+  padding: 10px 0px;
+  height: auto;
 }
 
 a {
+	display: flex;
+	align-items: center;
+	padding: 0px 10px;
+	height: 17px;
   color: white;
   text-decoration: none;
+  font-size: 10px;
+  color: #aaa;
+  border-right: solid 1px #ccc;
+  text-transform: uppercase;
+}
+
+a:last-child {
+  border-right: none;
 }
 
 a.active {
-  color: red;
+  color: white;
 }
