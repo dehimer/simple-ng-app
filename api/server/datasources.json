@@ -1,0 +1,8 @@
+{
+  "db": {
+    "name": "db",
+    "localStorage": "simple-db-app-db",
+    "file": "memdb.json",
+    "connector": "memory"
+  }
+}
