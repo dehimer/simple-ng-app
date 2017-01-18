@@ -12,5 +12,13 @@
       "../common/mixins",
       "./mixins"
     ]
+  },
+  "Author": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Book": {
+    "dataSource": "db",
+    "public": true
   }
 }

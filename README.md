@@ -16,11 +16,8 @@ SIMPLE NG APP FOR TEST PURPOSES
 			.	scrolling for sides
 		.	content for right side
 		.	do grid for books
-*	.	color of active link
-
-.	TO BUY ENERGY DRINK!
-
-	.	loopback
+	5	color of active link
+*	.	loopback
 	.	group files by types
 
 	.	branch with material ui for elements
