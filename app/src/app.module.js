@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var http_1 = require('@angular/http');
+var index_1 = require('./shared/sdk/index');
 var app_component_1 = require('./app.component');
 var top_panel_component_1 = require('./top-panel.component');
 var content_component_1 = require('./content.component');
@@ -41,7 +42,7 @@ var AppModule = (function () {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, router_1.RouterModule.forRoot(appRoutes), http_1.HttpModule],
+            imports: [platform_browser_1.BrowserModule, router_1.RouterModule.forRoot(appRoutes), http_1.HttpModule, index_1.SDKBrowserModule.forRoot()],
             declarations: [app_component_1.AppComponent, home_component_1.HomeComponent, library_component_1.LibraryComponent, about_component_1.AboutComponent, not_found_component_1.NotFoundComponent, top_panel_component_1.TopPanelComponent, content_component_1.ContentComponent, button_component_1.ButtonComponent, authors_component_1.AuthorsComponent, rooms_component_1.RoomsComponent, book_component_1.BookComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 

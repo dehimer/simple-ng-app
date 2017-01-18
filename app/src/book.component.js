@@ -10,11 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
-var http_service_1 = require('./http.service');
+var index_1 = require('./shared/sdk/services/index');
 var BookComponent = (function () {
-    function BookComponent(httpService, activateRoute) {
+    function BookComponent(bookApi, activateRoute) {
         var _this = this;
-        this.httpService = httpService;
+        this.bookApi = bookApi;
         this.activateRoute = activateRoute;
         this.books = [];
         this.subscription = activateRoute.params.subscribe(function (params) {
@@ -27,12 +27,9 @@ var BookComponent = (function () {
     };
     BookComponent.prototype.updateList = function () {
         var _this = this;
-        this.httpService.getData()
-            .subscribe(function (resp) {
-            var data = resp.json();
-            _this.books = data.books.filter(function (book) {
-                return +book.author === +_this.authorid;
-            });
+        this.bookApi.find()
+            .subscribe(function (books) {
+            _this.books = books;
         });
     };
     BookComponent = __decorate([
@@ -41,10 +38,9 @@ var BookComponent = (function () {
             template: "\n    <div *ngFor=\"let book of books\" class='book'>\n      {{book?.name}}\n    </div>\n  ",
             styles: [
                 "\n      :host {\n        display: flex;\n        flex-direction: column;\n        align-items: stretch;\n        overflow-y: auto;\n      }\n\n      .book {\n        flex: auto;\n        background-color: #ccc;\n        border-radius: 5px;\n        padding: 10px;\n        margin: 5px;\n      }\n\n    "
-            ],
-            providers: [http_service_1.HttpService]
+            ]
         }), 
-        __metadata('design:paramtypes', [http_service_1.HttpService, router_1.ActivatedRoute])
+        __metadata('design:paramtypes', [index_1.BookApi, router_1.ActivatedRoute])
     ], BookComponent);
     return BookComponent;
 }());

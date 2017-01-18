@@ -1,7 +1,6 @@
 import { Component} from '@angular/core';
-import { Response} from '@angular/http';
-import { HttpService} from './http.service';
-import { Author } from './author';
+import { Author } from './shared/sdk/models';
+import { AuthorApi } from './shared/sdk/services/index';
 
 @Component({
   selector: 'authors',
@@ -57,17 +56,15 @@ import { Author } from './author';
         color: red;
       }
     `
-  ],
-  providers: [HttpService]
+  ]
 })
 export class AuthorsComponent {
   authors: Author[] = [];
-  constructor(private httpService: HttpService){}
+  constructor(private authorApi: AuthorApi){}
   ngOnInit(){
-    this.httpService.getData()
-      .subscribe((resp: Response) => {
-          let data = resp.json();
-          this.authors = data.authors;
+    this.authorApi.find()
+      .subscribe((authors: Author[]) => {
+        this.authors = authors;
       });
   }
 }

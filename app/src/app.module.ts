@@ -2,6 +2,8 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule }   from '@angular/http';
 
+import { SDKBrowserModule } from './shared/sdk/index'; 
+
 import { AppComponent }   from './app.component';
 import { TopPanelComponent }   from './top-panel.component';
 import { ContentComponent }   from './content.component';
@@ -37,7 +39,7 @@ const appRoutes: Routes =[
 ];
 
 @NgModule({
-    imports:      [ BrowserModule, RouterModule.forRoot(appRoutes), HttpModule ],
+    imports:      [ BrowserModule, RouterModule.forRoot(appRoutes), HttpModule, SDKBrowserModule.forRoot() ],
     declarations: [ AppComponent, HomeComponent, LibraryComponent, AboutComponent, NotFoundComponent, TopPanelComponent, ContentComponent, ButtonComponent, AuthorsComponent, RoomsComponent, BookComponent ],
     bootstrap:    [ AppComponent ]
 })

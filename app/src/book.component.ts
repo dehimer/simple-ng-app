@@ -1,9 +1,8 @@
 import { Component, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
-import { Response} from '@angular/http';
-import { HttpService} from './http.service';
-import { Book } from './book';
+import { Book } from './shared/sdk/models';
+import { BookApi } from './shared/sdk/services/index';
 
 @Component({
   selector: 'book',
@@ -30,14 +29,13 @@ import { Book } from './book';
       }
 
     `
-  ],
-  providers: [HttpService]
+  ]
 })
 export class BookComponent {
   books: Book[] = [];
   private authorid: number;
   private subscription: Subscription;
-  constructor(private httpService: HttpService, private activateRoute: ActivatedRoute){
+  constructor(private bookApi: BookApi, private activateRoute: ActivatedRoute){
       this.subscription = activateRoute.params.subscribe(params=>{
         this.authorid=params['authorid'];
         this.updateList();
@@ -47,12 +45,9 @@ export class BookComponent {
       this.subscription.unsubscribe();
   }
   updateList(){
-    this.httpService.getData()
-      .subscribe((resp: Response) => {
-          let data = resp.json();
-          this.books = data.books.filter(book => {
-            return +book.author === +this.authorid;
-          });
+    this.bookApi.find()
+      .subscribe((books: Book[]) => {
+        this.books = books;
       });
   }
 }
