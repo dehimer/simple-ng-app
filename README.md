@@ -1,5 +1,11 @@
 SIMPLE NG APP FOR TEST PURPOSES
 
+To run do npm install in both directories, then in in api directory run "slc run" and in app directory run "npm start".
+Don't forget install loopback globaly (npm i -g loopback) before.
+
+
+ToDo List
+<pre>
 	1.	setup environment
 	2. 	main component
 	3.	render upper navigation
@@ -17,11 +23,12 @@ SIMPLE NG APP FOR TEST PURPOSES
 		.	content for right side
 		.	do grid for books
 	5	color of active link
-*	.	loopback
-	.	group files by types
+	6.	loopback
+*	.	group files by types
 
 	.	branch with material ui for elements
 
 
 	.	webpack
 	.	postcss+autoprefixier
+</pre>
