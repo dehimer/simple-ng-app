@@ -1,10 +1,10 @@
 SIMPLE NG APP FOR TEST PURPOSES
 
-To run do npm install in both directories, then in in api directory run "slc run" and in app directory run "npm start".
-Don't forget install loopback globaly (npm i -g loopback) before.
+To run do "npm install" in both directories, then in "api" directory run "slc run" and in "app" directory run "npm start".
+Don't forget to install loopback globaly (npm i -g loopback) before.
 
-Loopback uses 3005 port.
-UI working on 3000 port.
+Loopback is uses 3005 port.
+UI is working on 3000 port.
 
 ToDo List
 <pre>
